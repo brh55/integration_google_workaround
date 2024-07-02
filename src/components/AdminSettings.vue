@@ -123,6 +123,7 @@ export default {
 				that.saveOptions({
 					client_id: this.state.client_id,
 					client_secret: this.state.client_secret,
+					redirect_proxy: this.state.redirect_proxy,
 				})
 			}, 2000)()
 		},
