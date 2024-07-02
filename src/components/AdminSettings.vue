@@ -54,12 +54,12 @@
 					@focus="readonly = false">
 			</div>
 			<div class="line">
-				<label for="google-client-id">
+				<label for="redirect-uri">
 					<KeyIcon />
 					{{ t('integration_google', 'Redirect URI') }}
 				</label>
 				<input id="redirect-uri"
-					v-model="state.client_id"
+					v-model="state.redirect_uri"
 					type="text"
 					:readonly="readonly"
 					:placeholder="t('integration_google', 'Redirect URI - Override')"
