@@ -53,6 +53,19 @@
 					@input="onInput"
 					@focus="readonly = false">
 			</div>
+			<div class="line">
+				<label for="google-client-id">
+					<KeyIcon />
+					{{ t('integration_google', 'Redirect URI') }}
+				</label>
+				<input id="redirect-uri"
+					v-model="state.client_id"
+					type="text"
+					:readonly="readonly"
+					:placeholder="t('integration_google', 'Redirect URI - Override')"
+					@focus="readonly = false"
+					@input="onInput">
+			</div>
 			<NcCheckboxRadioSwitch
 				:checked.sync="state.use_popup"
 				@update:checked="onUsePopupChanged">
