@@ -301,9 +301,10 @@ export default {
 	props: [],
 
 	data() {
+		const state = loadState('integration_google', 'user-config');
 		return {
-			state: loadState('integration_google', 'user-config'),
-			redirect_uri: window.location.protocol + '//' + window.location.host + generateUrl('/apps/integration_google/oauth-redirect'),
+			state,
+			redirect_uri: state.redirect_proxy + generateUrl('/apps/integration_google/oauth-redirect'),
 			// calendars
 			calendars: [],
 			importingCalendar: {},
