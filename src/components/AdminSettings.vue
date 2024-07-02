@@ -101,11 +101,12 @@ export default {
 	props: [],
 
 	data() {
+		const state = loadState('integration_google', 'admin-config');
 		return {
-			state: loadState('integration_google', 'admin-config'),
+			state,
 			// to prevent some browsers to fill fields with remembered passwords
 			readonly: true,
-			redirect_uri: window.location.protocol + '//' + window.location.host + generateUrl('/apps/integration_google/oauth-redirect'),
+			redirect_uri: state.redirect_proxy + generateUrl('/apps/integration_google/oauth-redirect'),
 		}
 	},
 
