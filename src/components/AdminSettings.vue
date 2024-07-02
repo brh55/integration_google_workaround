@@ -59,10 +59,10 @@
 					{{ t('integration_google', 'Redirect URI') }}
 				</label>
 				<input id="redirect-uri"
-					v-model="state.redirect_uri"
+					v-model="state.redirect_proxy"
 					type="text"
 					:readonly="readonly"
-					:placeholder="t('integration_google', 'Redirect URI - Override')"
+					:placeholder="t('integration_google', 'Based Hostname for Proxy to Configure for Redirect')"
 					@focus="readonly = false"
 					@input="onInput">
 			</div>
